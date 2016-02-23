@@ -1,0 +1,54 @@
+{
+  "app-id": "org.baedert.corebird",
+  "runtime": "org.gnome.Sdk",
+  "sdk" : "org.gnome.Sdk",
+  "strip" : false,
+  "command" : "corebird",
+  "finish-args" : [
+    "--share=ipc",
+    "--share=network",
+    "--socket=x11",
+    "--socket=wayland",
+    "--filesystem=host",
+    "--talk-name=ca.desrt.dconf",
+    "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+  ],
+  "build-options" : {
+    "cflags" : "-O0 -g"
+  },
+  "modules" : [
+    {
+      "name" : "librest",
+      "sources" : [
+        {
+          "type"   : "git",
+          "url"    : "git://git.gnome.org/librest.git"
+        }
+      ]
+    },
+    {
+      "name"    : "libgee",
+      "sources" : [
+        {
+          "type"   : "git",
+          "url"    : "git://git.gnome.org/libgee.git"
+        },
+        {
+          "type" : "patch",
+          "path" : "0001-Remove-Introspection.patch"
+        }
+      ]
+    },
+    {
+      "name" : "corebird",
+      "config-opts" : ["--enable-debug", "--disable-video"],
+      "sources" : [
+        {
+          "type"   : "git",
+          "url"    : "https://github.com/baedert/corebird",
+          "branch" : "master"
+        }
+      ]
+    }
+  ]
+}

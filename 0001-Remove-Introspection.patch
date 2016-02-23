@@ -1,0 +1,61 @@
+From 4b9d2c95f153c00a11327a1693022daf10d0295e Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Timm=20B=C3=A4der?= <mail@baedert.org>
+Date: Tue, 23 Feb 2016 18:09:04 +0100
+Subject: [PATCH] Remove Introspection
+
+---
+ configure.ac    |  3 ---
+ gee/Makefile.am | 23 -----------------------
+ 2 files changed, 26 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 9b1010d..540a80f 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -65,9 +65,6 @@ AC_ARG_ENABLE(consistency-check, [AS_HELP_STRING([--enable-consistency-check], [
+               enable_consistency_check=$enableval, enable_consistency_check=no)
+ AS_IF([test "x$enable_consistency_check" != xno], [VALA_ADD_VALAFLAGS(-D CONSISTENCY_CHECKS)])
+ 
+-AX_REQUIRE_DEFINED([GOBJECT_INTROSPECTION_CHECK])
+-GOBJECT_INTROSPECTION_CHECK([0.9.0])
+-
+ VALA_CHECK([0.25.1])
+ 
+ AC_OUTPUT([Makefile
+diff --git a/gee/Makefile.am b/gee/Makefile.am
+index 42e0a89..bfbd337 100644
+--- a/gee/Makefile.am
++++ b/gee/Makefile.am
+@@ -146,29 +146,6 @@ dist_vapi_DATA = \
+ 	gee-0.8.vapi \
+ 	$(NULL)
+ 
+-if HAVE_INTROSPECTION
+-girdir = @INTROSPECTION_GIRDIR@
+-
+-dist_gir_DATA = \
+-	Gee-0.8.gir \
+-	$(NULL)
+-
+-typelibdir = @INTROSPECTION_TYPELIBDIR@
+-typelib_DATA = \
+-	Gee-0.8.typelib \
+-	$(NULL)
+-
+-# Extract dlname from libfolks.la; see bug #658002.
+-# This is what g-ir-scanner does.
+-libgee_dlname = \
+-	`$(SED) -nE "s/^dlname='([A-Za-z0-9.+-]+)'/\1/p" libgee-0.8.la`
+-INTROSPECTION_COMPILER_ARGS= \
+-	-l $(libgee_dlname)
+-Gee-0.8.gir: libgee_0_8_la_vala.stamp
+-Gee-0.8.typelib: Gee-0.8.gir libgee-0.8.la
+-	@INTROSPECTION_COMPILER@ $(INTROSPECTION_COMPILER_ARGS) -o $@ $^
+-endif
+-
+ MOSTLYCLEANFILES = \
+ 	$(libgee_0_8_la_VALASOURCES:.vala=.c) \
+ 	libgee_0_8_la_vala.stamp \
+-- 
+2.7.1
+
