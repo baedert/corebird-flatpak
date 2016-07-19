@@ -23,7 +23,8 @@
       "sources" : [
         {
           "type"   : "git",
-          "url"    : "git://git.gnome.org/librest.git"
+          "url"    : "git://git.gnome.org/librest.git",
+          "branch" : "librest-0-7"
         }
       ]
     },
