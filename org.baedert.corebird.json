@@ -1,7 +1,7 @@
 {
   "app-id": "org.baedert.corebird",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.20",
+  "runtime-version": "master",
   "sdk" : "org.gnome.Sdk",
   "strip" : false,
   "command" : "corebird",
@@ -15,7 +15,7 @@
     "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
   "build-options" : {
-    "cflags" : "-O2 -g"
+    "cflags" : "-O0 -g"
   },
   "modules" : [
     {
