@@ -18,6 +18,10 @@
   "build-options" : {
     "cflags" : "-O0 -g"
   },
+  "cleanup" : [
+    "/include", "/share/gir-1.0",
+    "/lib/pkgconfig", "/lib/girepository-1.0"
+  ],
   "modules" : [
     {
       "name" : "librest",
