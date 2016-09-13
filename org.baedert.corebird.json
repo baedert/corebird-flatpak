@@ -5,6 +5,7 @@
   "sdk" : "org.gnome.Sdk",
   "strip" : false,
   "command" : "corebird",
+  "rename-icon" : "corebird",
   "finish-args" : [
     "--share=ipc",
     "--share=network",
@@ -30,7 +31,7 @@
     },
     {
       "name" : "corebird",
-      "config-opts" : ["--enable-debug", "--disable-video"],
+      "config-opts" : ["--enable-debug"],
       "sources" : [
         {
           "type"   : "git",
