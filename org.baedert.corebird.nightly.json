@@ -1,11 +1,13 @@
 {
   "app-id": "org.baedert.corebird",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.20",
+  "runtime-version": "master",
   "sdk" : "org.gnome.Sdk",
   "strip" : false,
   "command" : "corebird",
   "rename-icon" : "corebird",
+  "tags" : ["nightly"],
+  "desktop-file-name-prefix": "(Nightly)",
   "finish-args" : [
     "--share=ipc",
     "--share=network",
@@ -35,11 +37,12 @@
     },
     {
       "name" : "corebird",
+      "config-opts" : ["--enable-debug"],
       "sources" : [
         {
           "type"   : "git",
           "url"    : "https://github.com/baedert/corebird",
-          "branch" : "cb-1.3"
+          "branch" : "master"
         }
       ]
     }
