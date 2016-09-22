@@ -1,5 +1,6 @@
 {
   "app-id": "org.baedert.corebird",
+  "branch": "1.3",
   "runtime": "org.gnome.Platform",
   "runtime-version": "3.20",
   "sdk" : "org.gnome.Sdk",
