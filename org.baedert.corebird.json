@@ -17,7 +17,7 @@
     "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
   "build-options" : {
-    "cflags" : "-O0 -g"
+    "cflags" : "-O2 -g"
   },
   "cleanup" : [
     "/include", "/share/gir-1.0",
