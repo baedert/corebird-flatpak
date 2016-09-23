@@ -2,7 +2,7 @@
 
 This is a `flatpak-builder` definition file to build both corebird master and current stable branches.
 
-The built app can be found at https://baedert.org/corebird-repo which is a flatpak repository.
+The built app can be found at https://baedert.org/repo which is a flatpak repository.
 
 
 Install it:
@@ -19,5 +19,4 @@ flaptak --user install baedert-repo org.baedert.corebird master
 
 # Run it
 flatpak run org.baedert.corebird
-...
 ```
