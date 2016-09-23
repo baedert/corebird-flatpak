@@ -2,8 +2,7 @@
 
 This is a `flatpak-builder` definition file to build both corebird master and current stable branches.
 
-The built app can be found at https://baedert.org/repo which is a flatpak repository.
-
+Due to corebird opening a browser whenever a link is clicked, as well as when setting up an account, you need to have `xdg-desktop-portal` installed.
 
 First, create the repository:
 
@@ -22,7 +21,7 @@ Now you can install corebird from the repo:
 flatpak --user install baedert-repo org.baedert.corebird stable
 
 # for the lastest unstable version
-flaptak --user install baedert-repo org.baedert.corebird master
+flatpak --user install baedert-repo org.baedert.corebird master
 ```
 
 ... and run it:
