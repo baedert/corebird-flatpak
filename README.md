@@ -7,17 +7,17 @@ The built app can be found at https://baedert.org/repo which is a flatpak reposi
 
 First, create the repository:
 
-```
+```shell
 flatpak --user remote-add -from=baedert.flatpakrepo
 ```
 or:
-```
+```shell
 wget https://baedert.org/repo/baedert-repo.gpg
 flatpak --user remote-add baedert-repo --gpg-import=baedert-repo.gpg https://baedert.org/repo
 ```
 
 Now you can install corebird from the repo:
-```
+```shell
 # for the current stable version
 flatpak --user install baedert-repo org.baedert.corebird stable
 
@@ -26,6 +26,6 @@ flaptak --user install baedert-repo org.baedert.corebird master
 ```
 
 ... and run it:
-```
+```shell
 flatpak run org.baedert.corebird
 ```
