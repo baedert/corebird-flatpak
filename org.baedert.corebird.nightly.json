@@ -39,6 +39,16 @@
       ]
     },
     {
+      "name" : "gspell",
+      "sources" : [
+        {
+          "type"   : "git",
+          "url"    : "git://git.gnome.org/gspell.git",
+          "branch" : "gspell-1-2"
+        }
+      ]
+    },
+    {
       "name" : "corebird",
       "config-opts" : ["--enable-debug"],
       "sources" : [
