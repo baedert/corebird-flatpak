@@ -6,17 +6,16 @@ Due to corebird opening a browser whenever a link is clicked, as well as when se
 
 [Get Flatpak using these instructions](http://flatpak.org/getting.html)
 
-First, get the GNOME Runtime, if you don't have it:
+First, add the remote for the GNOME Runtime, if you don't have it:
 ```shell
 flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
-flatpak install gnome org.gnome.Platform 3.22
 ```
 
 Then, create the repository:
-
 ```shell
 flatpak --user remote-add -from=baedert.flatpakrepo
 ```
+
 or manually:
 ```shell
 wget https://baedert.org/repo/baedert-repo.gpg
