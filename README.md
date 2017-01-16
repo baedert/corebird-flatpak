@@ -4,11 +4,18 @@ This is a `flatpak-builder` definition file to build both corebird master and cu
 
 Due to corebird opening a browser whenever a link is clicked, as well as when setting up an account, you need to have `xdg-desktop-portal` as well as one implementation for it (currently there is only `xdg-desktop-portal-gtk` as far as I know) installed.
 
-First, create the repository:
+[Get Flatpak using these instructions](http://flatpak.org/getting.html)
 
+First, add the remote for the GNOME Runtime, if you don't have it:
+```shell
+flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
+```
+
+Then, create the repository:
 ```shell
 flatpak --user remote-add -from=baedert.flatpakrepo
 ```
+
 or manually:
 ```shell
 wget https://baedert.org/repo/baedert-repo.gpg
