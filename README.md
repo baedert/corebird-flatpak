@@ -13,22 +13,22 @@ flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
 
 Then, create the repository:
 ```shell
-flatpak --user remote-add -from=baedert.flatpakrepo
+flatpak remote-add --from baedert https://raw.githubusercontent.com/baedert/corebird-flatpak/master/baedert.flatpakrepo
 ```
 
 or manually:
 ```shell
 wget https://baedert.org/repo/baedert-repo.gpg
-flatpak --user remote-add baedert-repo --gpg-import=baedert-repo.gpg https://baedert.org/repo
+flatpak remote-add baedert --gpg-import=baedert-repo.gpg https://baedert.org/repo
 ```
 
 Now you can install corebird from the repo:
 ```shell
 # for the current stable version
-flatpak --user install baedert-repo org.baedert.corebird stable
+flatpak install baedert org.baedert.corebird stable
 
 # for the lastest unstable version
-flatpak --user install baedert-repo org.baedert.corebird master
+flatpak install baedert-repo org.baedert.corebird master
 ```
 
 ... and run it:
