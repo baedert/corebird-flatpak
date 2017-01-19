@@ -28,7 +28,7 @@ Now you can install corebird from the repo:
 flatpak install baedert org.baedert.corebird stable
 
 # for the lastest unstable version
-flatpak install baedert-repo org.baedert.corebird master
+flatpak install baedert org.baedert.corebird master
 ```
 
 ... and run it:
