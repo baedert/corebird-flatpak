@@ -29,6 +29,17 @@
   ],
   "modules" : [
     {
+      "name" : "gst-libav",
+      "config-opts" : ["--with-libav-extra-configure='--disable-yasm'"],
+      "sources" : [
+        {
+          "type"   : "git",
+          "url"    : "git://anongit.freedesktop.org/gstreamer/gst-libav",
+          "branch" : "1.8"
+        }
+      ]
+    },
+    {
       "name" : "librest",
       "sources" : [
         {
