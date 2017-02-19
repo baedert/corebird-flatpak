@@ -24,12 +24,16 @@
   "cleanup" : [
     "/include", "/share/gir-1.0",
     "/lib/pkgconfig", "/lib/girepository-1.0",
-    "/share/vala-0.34"
+    "/share/vala-0.34", "/bin/vala*", "/bin/vapi*",
+    "/share/devhelp", "/share/aclocal", "/lib/*.la",
+    "/lib/libvala*", "/lib/vala-0.34", "/lib/debug/source/vala",
+    "/lib/debug/source/rest/rest-extras"
   ],
   "modules" : [
     {
       "name" : "gst-libav",
       "config-opts" : ["--with-libav-extra-configure='--disable-yasm'"],
+      "cleanup" : ["*.la"],
       "sources" : [
         {
           "type"   : "git",
@@ -40,6 +44,7 @@
     },
     {
       "name" : "librest",
+      "cleanup" : ["/lib/librest-extras*"],
       "sources" : [
         {
           "type"   : "git",
