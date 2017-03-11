@@ -49,6 +49,17 @@
         }
       ]
     },
+    /* Temporarily build vala to work around missing vala commit 5836d087eba85735838c44f6f04c4be92643ceba */
+    {
+      "name" : "vala",
+      "sources" : [
+        {
+          "type" : "git",
+          "url"  : "git://git.gnome.org/vala",
+          "branch" : "master"
+        }
+      ]
+    },
     {
       "name" : "gspell",
       "sources" : [
