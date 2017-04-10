@@ -66,6 +66,8 @@
     {
       "name" : "corebird",
       "config-opts" : ["--enable-debug"],
+      "buildsystem" : "meson",
+      "builddir" : true,
       "sources" : [
         {
           "type"   : "git",
