@@ -49,17 +49,6 @@
         }
       ]
     },
-    /* Temporarily build vala to work around missing vala commit 5836d087eba85735838c44f6f04c4be92643ceba */
-    {
-      "name" : "vala",
-      "sources" : [
-        {
-          "type" : "git",
-          "url"  : "git://git.gnome.org/vala",
-          "branch" : "master"
-        }
-      ]
-    },
     {
       "name" : "gspell",
       "sources" : [
@@ -67,6 +56,10 @@
           "type"   : "git",
           "url"    : "git://git.gnome.org/gspell.git",
           "branch" : "gspell-1-2"
+        },
+        {
+          "type" : "patch",
+          "path" : "0010-Add-generated-vapi-file.patch"
         }
       ]
     },
