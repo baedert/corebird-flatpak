@@ -65,7 +65,7 @@
     },
     {
       "name" : "corebird",
-      "config-opts" : ["--enable-debug"],
+      "config-opts" : ["-Ddebug=true"],
       "buildsystem" : "meson",
       "builddir" : true,
       "sources" : [
