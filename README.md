@@ -6,6 +6,21 @@ Due to corebird opening a browser whenever a link is clicked, as well as when se
 
 [Get Flatpak using these instructions](http://flatpak.org/getting.html)
 
+## Installing the Easy Way
+
+Just use the `.flatpakref` file:
+```shell
+flatpak install --from http://baedert.org/repo/org.baedert.corebird.flatpakref
+```
+
+This will install both Corebird itself and the runtime it depends on.
+There is also a `.flatpakref` file for the nightly build:
+```shell
+flatpak install --from http://baedert.org/repo/org.baedert.corebird.nightly.flatpakref
+```
+
+## Installing the Manual Way
+
 First, add the remote for the GNOME Runtime, if you don't have it:
 ```shell
 flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
