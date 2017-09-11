@@ -54,7 +54,7 @@
     },
     {
       "name" : "corebird",
-      "config-opts" : ["-Ddebug=true"],
+      "config-opts" : ["-Dbuildtype=debug", "-Ddefault_library=static"],
       "buildsystem" : "meson",
       "builddir" : true,
       "sources" : [
