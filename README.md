@@ -6,47 +6,12 @@ Due to corebird opening a browser whenever a link is clicked, as well as when se
 
 [Get Flatpak using these instructions](http://flatpak.org/getting.html)
 
-## Installing the Easy Way
+**For the stable version, see Corebird on Flathub: https://flathub.org/apps.html**
 
-Just use the `.flatpakref` file:
-```shell
-flatpak install --from http://baedert.org/repo/org.baedert.corebird.flatpakref
-```
+## Nightly Version
 
-This will install both Corebird itself and the runtime it depends on.
-There is also a `.flatpakref` file for the nightly build:
+The nightly version is rebuilt every time a bigger change lands.
+
 ```shell
 flatpak install --from http://baedert.org/repo/org.baedert.corebird.nightly.flatpakref
-```
-
-## Installing the Manual Way
-
-First, add the remote for the GNOME Runtime, if you don't have it:
-```shell
-flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
-```
-
-Then, create the repository:
-```shell
-flatpak remote-add --from baedert https://raw.githubusercontent.com/baedert/corebird-flatpak/master/baedert.flatpakrepo
-```
-
-or manually:
-```shell
-wget https://baedert.org/repo/baedert-repo.gpg
-flatpak remote-add baedert --gpg-import=baedert-repo.gpg https://baedert.org/repo
-```
-
-Now you can install corebird from the repo:
-```shell
-# for the current stable version
-flatpak install baedert org.baedert.corebird stable
-
-# for the lastest unstable version
-flatpak install baedert org.baedert.corebird master
-```
-
-... and run it:
-```shell
-flatpak run org.baedert.corebird
 ```
